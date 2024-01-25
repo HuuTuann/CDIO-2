@@ -1,0 +1,31 @@
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0.5rem;
+    width: 37rem;
+    height: 30rem;
+    overflow: hidden;
+
+    &:hover {
+        background: rgba(0, 84, 97, 0.3);
+        backdrop-filter: blur(2.5px);
+
+        .action {
+            bottom: 3.5rem;
+        }
+    }
+
+    .action {
+        position: absolute;
+        padding: 1.3rem 7.5rem;
+        bottom: -100%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 5.5rem;
+        background-color: var(--secondColor);
+        border-radius: 0.5rem;
+        transition: bottom 0.2s ease-in-out;
+    }
+}

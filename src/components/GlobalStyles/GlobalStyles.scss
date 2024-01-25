@@ -61,6 +61,12 @@ a {
 @font-face {
     font-family: Libre Caslon Text;
     src: url('/assets/fonts/LibreCaslonText-Regular.woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Libre Caslon Text;
+    src: url('/assets/fonts/LibreCaslonText-Bold.woff2');
     font-weight: 700;
 }
 
