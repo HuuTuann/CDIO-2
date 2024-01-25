@@ -26,7 +26,9 @@ body {
     font-weight: 400;
     font-family: var(--font-family);
     line-height: 2.6rem; /* 162.5% */
+    color: #fff;
 }
+
 a {
     text-decoration: none;
     color: inherit;
@@ -35,8 +37,13 @@ a {
 // Font embedded
 @font-face {
     font-family: Plus Jakarta Sans;
-    src: url('/assets/fonts/PlusJakartaSans-Light.woff2');
+    src: url('/assets/fonts/PlusJakartaSans-Regular.woff2');
     font-weight: 400;
+}
+@font-face {
+    font-family: Plus Jakarta Sans;
+    src: url('/assets/fonts/PlusJakartaSans-Medium.woff2');
+    font-weight: 500;
 }
 
 @font-face {
@@ -46,9 +53,15 @@ a {
 }
 
 @font-face {
+    font-family: Plus Jakarta Sans;
+    src: url('/assets/fonts/PlusJakartaSans-Bold.woff2');
+    font-weight: 700;
+}
+
+@font-face {
     font-family: Libre Caslon Text;
     src: url('/assets/fonts/LibreCaslonText-Regular.woff2');
-    font-weight: 500;
+    font-weight: 700;
 }
 
 @font-face {

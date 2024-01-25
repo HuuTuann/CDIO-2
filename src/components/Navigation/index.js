@@ -6,7 +6,7 @@ const cx = classNames.bind(styles);
 
 function Navigation() {
     const getClassName = ({ isActive }) => {
-        return isActive ? styles.active : '';
+        return cx('item__link', isActive ? styles.active : '');
     };
 
     return (

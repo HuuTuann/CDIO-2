@@ -4,14 +4,14 @@
     gap: 3.3rem;
 }
 
-.item {
+.item__link {
     color: #fff;
     line-height: 2.6rem; /* 162.5% */
     letter-spacing: 0.032rem;
     cursor: pointer;
 
     &:hover,
-    .active {
+    &.active {
         color: var(--orangeFont);
         font-weight: 500;
     }

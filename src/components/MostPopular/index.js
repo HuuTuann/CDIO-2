@@ -4,7 +4,7 @@ import styles from './MostPopular.module.scss';
 const cx = classNames.bind(styles);
 
 function MostPopular() {
-    return <h1>MostPopular</h1>;
+    return <div className={cx('most-popular')}></div>;
 }
 
 export default MostPopular;

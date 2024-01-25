@@ -1,5 +1,7 @@
 .hero {
     background-color: var(--primaryColor);
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -7,5 +9,4 @@
     display: flex;
     align-items: center;
     margin: 0 auto;
-    color: #fff;
 }
