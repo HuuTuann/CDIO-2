@@ -8,6 +8,7 @@ function Total() {
     return (
         <div className={cx('total')}>
             <img className={cx('image')} src={images.total} alt="Food" />
+            <div className={cx('layer')}></div>
             <div className={cx('content')}>
                 <div className={cx('item')}>
                     <span className={cx('value')}>06</span>

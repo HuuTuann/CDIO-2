@@ -4,23 +4,23 @@
 }
 
 .image {
-    position: relative;
     display: flex;
     width: 100%;
     height: 19.4rem;
     object-fit: cover;
+    background-color: #fff;
+}
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(269deg, rgba(0, 0, 0, 0.2) 21.08%, rgba(0, 0, 0, 0) 38.98%), rgba(0, 84, 97, 0.6);
-        backdrop-filter: blur(2.5px);
-    }
+.layer {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 84, 97, 0.3);
+    backdrop-filter: blur(2.5px);
 }
 
 .content {
