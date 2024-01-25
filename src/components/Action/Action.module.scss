@@ -1,0 +1,16 @@
+.login,
+.signup {
+    color: #fff;
+    font-weight: 700;
+    line-height: 2.6rem; /* 162.5% */
+    letter-spacing: 0.048rem;
+}
+
+.signup {
+    display: inline-block;
+    margin-left: 1.3rem;
+    padding: 0.95rem 1.8rem 1.05rem 1.9rem;
+    border-radius: 4rem;
+    color: var(--primaryColor);
+    background: var(--yellowLightFont);
+}

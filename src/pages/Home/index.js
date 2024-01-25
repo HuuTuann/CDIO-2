@@ -1,12 +1,10 @@
-import Header from '~/components/Layout/components/Header';
-import Navigation from '~/components/Layout/components/Navigation';
+import { Hero, MostPopular } from '~/components';
 
 function Home() {
     return (
         <>
-            <Header>
-                <Navigation />
-            </Header>
+            <Hero />
+            <MostPopular />
         </>
     );
 }
