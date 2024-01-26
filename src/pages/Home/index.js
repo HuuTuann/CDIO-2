@@ -1,10 +1,11 @@
-import { Hero, MostPopular } from '~/components';
+import { Hero, MostPopular, TimeOpen } from '~/components';
 
 function Home() {
     return (
         <>
             <Hero />
             <MostPopular />
+            <TimeOpen />
         </>
     );
 }

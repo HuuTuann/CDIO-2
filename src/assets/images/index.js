@@ -18,7 +18,11 @@ const images = {
 
     // Action
     shoppingCart: require('~/assets/images/shopping-cart.svg').default,
-    lovely: require('~/assets/images/lovely.svg').default,
+    love: require('~/assets/images/love.svg').default,
+    loved: require('~/assets/images/loved.svg').default,
+
+    // Time Open
+    bannerTimeOpen: require('~/assets/images/banner-time-open.png'),
 };
 
 export default images;
