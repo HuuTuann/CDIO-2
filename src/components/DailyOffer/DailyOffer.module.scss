@@ -1,0 +1,124 @@
+.daily-offers {
+    background-color: var(--primaryColor);
+    padding: 7rem 0;
+}
+
+.container {
+    width: 117rem;
+    margin: 0 auto;
+}
+
+.heading {
+    color: #fff;
+    text-align: center;
+    font-family: 'Libre Caslon Text';
+    font-size: 6.4rem;
+    line-height: 7.4rem; /* 115.625% */
+    text-transform: capitalize;
+    margin-bottom: 5.2rem;
+}
+
+.body {
+    display: flex;
+    gap: 3rem;
+}
+
+.banner {
+    position: relative;
+    flex: 1 0 calc(50% - 1.5rem);
+
+    .image-wrap {
+        display: flex;
+    }
+
+    .image {
+        width: 57rem;
+        height: 43.4rem;
+        object-fit: cover;
+    }
+
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 7rem;
+        transform: translateY(-50%);
+
+        .type {
+            font-size: 2.8rem;
+            font-weight: 600;
+            line-height: 3.8rem; /* 135.714% */
+            margin-bottom: 0.8rem;
+        }
+
+        .offer {
+            color: #fff;
+            font-size: 2.6rem;
+            font-weight: 600;
+            line-height: 3.6rem; /* 138.462% */
+        }
+
+        .percent {
+            color: var(--orangeFont);
+            font-family: Playball;
+            font-size: 8.4rem;
+            line-height: 8.2rem; /* 97.619% */
+            letter-spacing: -0.504rem;
+        }
+
+        .desc {
+            width: 25.4rem;
+            margin: 1.4rem 0 4rem;
+        }
+
+        .btn {
+            color: #fff;
+            background-color: var(--orangeFont);
+            padding: 0.8rem 3rem;
+            border: none;
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.list {
+    flex: 1 0 calc(50% - 1.5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    .image {
+        width: 13rem;
+        height: 12rem;
+        object-fit: cover;
+    }
+
+    .content {
+        .sub-heading {
+            color: var(--yellowLightFont);
+            font-family: 'Libre Caslon Text';
+            font-size: 3rem;
+            font-weight: 500;
+            line-height: 3.4rem; /* 113.333% */
+        }
+
+        .desc {
+            padding-top: 1.6rem;
+        }
+    }
+
+    .price {
+        color: var(--yellowLightFont);
+        font-family: 'Libre Caslon Text';
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 3.4rem; /* 113.333% */
+        text-transform: capitalize;
+    }
+}

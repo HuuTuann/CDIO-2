@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import classNames from 'classnames/bind';
 
-import styles from './LayerImage.module.scss';
+import styles from './LayerItem.module.scss';
 import images from '~/assets/images';
 
 const cx = classNames.bind(styles);
 
-function LayerImage() {
+function LayerItem() {
     const [loved, setLoved] = useState(false);
 
     const handleLoved = () => {
@@ -28,4 +28,4 @@ function LayerImage() {
     );
 }
 
-export default LayerImage;
+export default LayerItem;

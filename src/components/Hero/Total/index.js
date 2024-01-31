@@ -1,27 +1,22 @@
 import classNames from 'classnames/bind';
 import styles from './Total.module.scss';
-import images from '~/assets/images';
 
 const cx = classNames.bind(styles);
 
 function Total() {
     return (
         <div className={cx('total')}>
-            <img className={cx('image')} src={images.total} alt="Food" />
-            <div className={cx('layer')}></div>
-            <div className={cx('content')}>
-                <div className={cx('item')}>
-                    <span className={cx('value')}>06</span>
-                    <span className={cx('desc')}>Number Restaurant</span>
-                </div>
-                <div className={cx('item')}>
-                    <span className={cx('value')}>68</span>
-                    <span className={cx('desc')}>New Food Menu Dishes</span>
-                </div>
-                <div className={cx('item')}>
-                    <span className={cx('value')}>36</span>
-                    <span className={cx('desc')}>Years of experience</span>
-                </div>
+            <div className={cx('item')}>
+                <span className={cx('value')}>06</span>
+                <span className={cx('desc')}>Number Restaurant</span>
+            </div>
+            <div className={cx('item')}>
+                <span className={cx('value')}>68</span>
+                <span className={cx('desc')}>New Food Menu Dishes</span>
+            </div>
+            <div className={cx('item')}>
+                <span className={cx('value')}>36</span>
+                <span className={cx('desc')}>Years of experience</span>
             </div>
         </div>
     );

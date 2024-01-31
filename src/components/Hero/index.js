@@ -3,6 +3,7 @@ import styles from './Hero.module.scss';
 import Banner from './Banner';
 import Content from './Content';
 import Total from './Total';
+import { BackgroundImage } from '~/components';
 
 const cx = classNames.bind(styles);
 
@@ -13,7 +14,9 @@ function Hero() {
                 <Content />
                 <Banner />
             </div>
-            <Total />
+            <BackgroundImage>
+                <Total />
+            </BackgroundImage>
         </div>
     );
 }
