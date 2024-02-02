@@ -1,3 +1,4 @@
+// Home
 export { default as Navigation } from './Navigation';
 export { default as Action } from './Action';
 export { default as Hero } from './Hero';
@@ -12,3 +13,6 @@ export { default as DailyOffer } from './DailyOffer';
 export { default as OurChef } from './OurChef';
 export { default as OurBlog } from './OurBlog';
 export { default as Subscribe } from './Subscribe';
+
+// Pages
+export { default as Suggest } from './Suggest';

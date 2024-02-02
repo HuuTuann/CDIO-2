@@ -1,0 +1,64 @@
+.footer {
+    background-color: var(--primaryColor);
+    padding: 7rem 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 117rem;
+}
+
+.col {
+    &:first-child {
+        width: 26.3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    &:nth-child(3) {
+        width: 19.7rem;
+    }
+
+    &:last-child {
+        width: 20.5rem;
+    }
+}
+
+.logo {
+    display: flex;
+    margin-bottom: auto;
+}
+
+.desc {
+    margin-bottom: 1.8rem;
+}
+
+.row {
+    display: flex;
+    gap: 1.8rem;
+}
+
+.model {
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.6rem; /* 130% */
+    margin-bottom: 2.4rem;
+}
+
+.content {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.item {
+    color: rgba(255, 255, 255, 0.8);
+}

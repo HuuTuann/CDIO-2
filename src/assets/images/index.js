@@ -61,6 +61,18 @@ const images = {
     // Our Blog
     ourBlog_1: require('~/assets/images/ourBlog-1.png'),
     ourBlog_2: require('~/assets/images/ourBlog-2.png'),
+
+    // Footer
+    appStore: require('~/assets/images/appStore.svg').default,
+    ggPlay: require('~/assets/images/ggPlay.svg').default,
+
+    // Suggest
+    suggestIcon: require('~/assets/images/suggestIcon.svg').default,
+
+    // Suggest Breakfast
+    suggestBreakfast_1: require('~/assets/images/breakfast-1.png'),
+    suggestBreakfast_2: require('~/assets/images/breakfast-2.png'),
+    suggestBreakfast_3: require('~/assets/images/breakfast-3.png'),
 };
 
 export default images;
