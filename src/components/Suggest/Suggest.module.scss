@@ -1,37 +1,26 @@
 .suggest {
     background-color: var(--primaryColor);
+    padding: 5rem 0;
+}
+
+.container {
+    width: 117rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .heading {
+    font-family: 'Libre Caslon Text';
+    font-size: 6.4rem;
+    line-height: 7.4rem; /* 115.625% */
 }
+
+// .icon {}
 
 .list {
-}
-
-.item {
-    position: relative;
-}
-
-.image {
-}
-
-.content {
-}
-
-.name {
-}
-
-.desc {
-}
-
-.row {
-}
-
-.link {
-}
-
-.price {
-}
-
-.value {
+    display: flex;
+    gap: 3rem;
+    padding-top: 6rem;
 }

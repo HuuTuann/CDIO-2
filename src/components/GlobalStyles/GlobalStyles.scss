@@ -162,6 +162,13 @@ input {
     font-family: inherit;
 }
 
+button {
+    color: inherit;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
 // Font embedded
 @font-face {
     font-family: Plus Jakarta Sans;

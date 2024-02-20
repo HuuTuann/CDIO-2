@@ -19,6 +19,7 @@ const images = {
 
     // Action
     shoppingCart: require('~/assets/images/shopping-cart.svg').default,
+    information: require('~/assets/images/information.svg').default,
     love: require('~/assets/images/love.svg').default,
     loved: require('~/assets/images/loved.svg').default,
 
@@ -69,10 +70,28 @@ const images = {
     // Suggest
     suggestIcon: require('~/assets/images/suggestIcon.svg').default,
 
+    // Hero Pages
+    heroPages: require('~/assets/images/heroPages.png'),
+
     // Suggest Breakfast
-    suggestBreakfast_1: require('~/assets/images/breakfast-1.png'),
-    suggestBreakfast_2: require('~/assets/images/breakfast-2.png'),
-    suggestBreakfast_3: require('~/assets/images/breakfast-3.png'),
+    suggestBreakfast_1: require('~/assets/images/suggestBreakfast-1.png'),
+    suggestBreakfast_2: require('~/assets/images/suggestBreakfast-2.png'),
+    suggestBreakfast_3: require('~/assets/images/suggestBreakfast-3.png'),
+
+    // Suggest Lunch
+    suggestLunch_1: require('~/assets/images/suggestLunch-1.png'),
+    suggestLunch_2: require('~/assets/images/suggestLunch-2.png'),
+    suggestLunch_3: require('~/assets/images/suggestLunch-3.png'),
+
+    // Suggest Dinner
+    suggestDinner_1: require('~/assets/images/suggestDinner-1.png'),
+    suggestDinner_2: require('~/assets/images/suggestDinner-2.png'),
+    suggestDinner_3: require('~/assets/images/suggestDinner-3.png'),
+
+    // Suggest Starters
+    suggestStarters_1: require('~/assets/images/suggestStarters-1.png'),
+    suggestStarters_2: require('~/assets/images/suggestStarters-2.png'),
+    suggestStarters_3: require('~/assets/images/suggestStarters-3.png'),
 };
 
 export default images;

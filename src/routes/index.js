@@ -1,8 +1,9 @@
-import { Home, Menu, Blog, Pages, Contact, Login, SignUp } from '~/pages';
+import { Home, Menu, ProductDetail, Blog, Pages, Contact, Login, SignUp } from '~/pages';
 
 const publicRouters = [
     { path: '/', component: Home },
     { path: '/menu', component: Menu },
+    { path: '/product-detail/:id', component: ProductDetail },
     { path: '/blog', component: Blog },
     { path: '/pages', component: Pages },
     { path: '/contact', component: Contact },

@@ -1,0 +1,145 @@
+.detail {
+}
+
+.detail-hero {
+    padding: 5.5rem;
+    background-color: var(--primaryColor);
+
+    .container {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+}
+
+.container {
+    width: 117rem;
+    margin: 0 auto;
+}
+
+.banner {
+    flex: 0 0 calc(50% - 1.5rem);
+}
+.picture {
+    display: flex;
+    width: 100%;
+    height: 61.6rem;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+.content {
+    flex: 0 0 calc(50% - 1.5rem);
+}
+.heading {
+    font-family: 'Libre Caslon Text';
+    font-size: 6.4rem;
+    font-weight: 500;
+    line-height: 7.4rem; /* 115.625% */
+}
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding-top: 0.9rem;
+}
+.countOfReviewer {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.4rem;
+    line-height: 2.4rem; /* 171.429% */
+}
+.price {
+    padding: 2rem 0;
+    font-family: 'Libre Caslon Text';
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 3.4rem; /* 141.667% */
+}
+.desc {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.row {
+    display: flex;
+    gap: 1.8rem;
+    padding: 5.2rem 0 4rem;
+
+    .actions {
+        display: flex;
+
+        .button {
+            font-size: 1.6rem;
+            padding: 0.5rem 1.5rem;
+            background-color: transparent;
+            border: 0.1rem solid rgba(255, 255, 255, 0.8);
+        }
+        .count {
+            text-align: center;
+            min-width: 3.5rem;
+            border-top: 0.1rem solid rgba(255, 255, 255, 0.8);
+            border-bottom: 0.1rem solid rgba(255, 255, 255, 0.8);
+        }
+    }
+    .add-to-cart {
+        padding: 0.8rem 3rem;
+        background-color: var(--orangeFont);
+    }
+}
+.category {
+    text-transform: capitalize;
+}
+
+.description {
+    background-color: var(--primaryColor);
+
+    .title {
+        display: inline-block;
+        position: relative;
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 2.8rem; /* 155.556% */
+        padding-bottom: 0.5rem;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            height: 0.1rem;
+            background-color: var(--orangeFont);
+        }
+    }
+
+    .content {
+        margin-top: 3.1rem;
+    }
+}
+
+.related {
+    position: relative;
+    padding: 5.5rem;
+    background-color: var(--primaryColor);
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 117rem;
+        height: 0.1rem;
+        background-color: rgba(255, 255, 255, 0.8);
+        opacity: 0.5;
+    }
+    .title {
+        font-family: 'Libre Caslon Text';
+        font-size: 2.4rem;
+        line-height: 3.4rem; /* 141.667% */
+        padding-bottom: 4rem;
+    }
+
+    .list {
+        display: flex;
+        gap: 3rem;
+    }
+}

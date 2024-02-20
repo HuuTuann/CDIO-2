@@ -1,5 +1,6 @@
 export { default as Home } from './Home';
 export { default as Menu } from './Menu';
+export { default as ProductDetail } from './ProductDetail';
 export { default as Blog } from './Blog';
 export { default as Pages } from './Pages';
 export { default as Contact } from './Contact';
