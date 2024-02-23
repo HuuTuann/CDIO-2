@@ -1,0 +1,33 @@
+.input-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+
+    .icon {
+        cursor: pointer;
+    }
+}
+
+.label,
+.input {
+    font-family: 'Plus Jakarta Sans';
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.input {
+    margin-top: 1rem;
+    outline: none;
+    border: 0.1rem solid #f2efed;
+    border-radius: 1.5rem;
+    background-color: transparent;
+    color: #fff;
+    font-family: 'Plus Jakarta Sans';
+    padding: 1.5rem 2rem;
+}

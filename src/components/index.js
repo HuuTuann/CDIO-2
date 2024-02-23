@@ -21,5 +21,8 @@ export { default as Suggest } from './Suggest';
 export { default as HeroPages } from './HeroPages';
 
 // Detail
-
 export { default as DetailHero } from './DetailHero';
+
+// Login
+export { default as Input } from './Input';
+export { default as Button } from './Button';

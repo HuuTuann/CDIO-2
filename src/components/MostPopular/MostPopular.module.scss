@@ -48,10 +48,15 @@
         padding-top: 1.6rem;
     }
 
-    .row {
+    .row-info,
+    .row-action {
         display: flex;
         justify-content: space-between;
         color: var(--blackFont);
+    }
+
+    .row-action {
+        margin: 3rem 0;
     }
 
     .name,
@@ -90,7 +95,6 @@
 .link-to-menu {
     display: flex;
     justify-content: center;
-    margin-top: 3rem;
 
     .link {
         display: flex;

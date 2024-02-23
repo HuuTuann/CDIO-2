@@ -6,7 +6,15 @@ const images = {
     bannerSmall_3: require('~/assets/images/banner-small-3.png'),
     total: require('~/assets/images/total.png'),
     arrowRight: require('~/assets/images/arrow-right.svg').default,
+    arrowLeft: require('~/assets/images/arrowLeft.svg').default,
     arrowRightLarge: require('~/assets/images/arrow-right-large.svg').default,
+    google: require('~/assets/images/google.svg').default,
+    fb: require('~/assets/images/fb.svg').default,
+    email: require('~/assets/images/email.svg').default,
+    greenTick: require('~/assets/images/greenTick.svg').default,
+    whiteTick: require('~/assets/images/whiteTick.svg').default,
+    hide: require('~/assets/images/hide.svg').default,
+    show: require('~/assets/images/show.svg').default,
 
     // Most Popular
     mostPopular_1: require('~/assets/images/most-popular-1.png'),

@@ -39,7 +39,7 @@ function MostPopular() {
                 <section key={index} className={cx('item')}>
                     <LayerItem image={item.image} />
                     <section className={cx('content')}>
-                        <div className={cx('row')}>
+                        <div className={cx('row-info')}>
                             <h3 className={cx('name')}>{item.name}</h3>
                             <p className={cx('price')}>
                                 <span>$</span>
@@ -47,7 +47,7 @@ function MostPopular() {
                             </p>
                         </div>
                         <p className={cx('desc')}>{item.desc}</p>
-                        <div className={cx('row')}>
+                        <div className={cx('row-action')}>
                             <Link className={cx('link-to-menu')} to="/menu">
                                 Order now
                             </Link>

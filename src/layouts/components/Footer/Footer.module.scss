@@ -1,6 +1,18 @@
 .footer {
+    position: relative;
     background-color: var(--primaryColor);
     padding: 7rem 0;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 117rem;
+        height: 0.1rem;
+        background-color: var(--secondColor);
+    }
 }
 
 .container {
