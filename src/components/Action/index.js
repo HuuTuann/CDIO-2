@@ -1,18 +1,32 @@
 import { Link } from 'react-router-dom';
 import styles from './Action.module.scss';
 import classNames from 'classnames/bind';
+import images from '~/assets/images';
 
 const cx = classNames.bind(styles);
 
 function Action() {
+    const isLogged = localStorage.getItem('isLogged') || true;
+
     return (
         <div className={cx('wrapper')}>
-            <Link to="/login" className={cx('login')}>
-                Login
-            </Link>
-            <Link to="/signup" className={cx('signup')}>
-                Sign Up
-            </Link>
+            {isLogged ? (
+                <>
+                    <Link to="/cart">
+                        <img className={cx('icon')} src={images.shoppingCart} alt="Shopping cart" />
+                    </Link>
+                    <img className={cx('icon')} src={images.user} alt="Shopping cart" />
+                </>
+            ) : (
+                <>
+                    <Link to="/login" className={cx('login')}>
+                        Login
+                    </Link>
+                    <Link to="/signup" className={cx('signup')}>
+                        Sign Up
+                    </Link>
+                </>
+            )}
         </div>
     );
 }

@@ -15,6 +15,9 @@ const images = {
     whiteTick: require('~/assets/images/whiteTick.svg').default,
     hide: require('~/assets/images/hide.svg').default,
     show: require('~/assets/images/show.svg').default,
+    user: require('~/assets/images/user.svg').default,
+    buttonPlus: require('~/assets/images/buttonPlus.svg').default,
+    buttonMinus: require('~/assets/images/buttonMinus.svg').default,
 
     // Most Popular
     mostPopular_1: require('~/assets/images/most-popular-1.png'),

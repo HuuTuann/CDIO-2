@@ -26,3 +26,6 @@ export { default as DetailHero } from './DetailHero';
 // Login
 export { default as Input } from './Input';
 export { default as Button } from './Button';
+
+// Cart
+export { default as CartItem } from './CartItem';

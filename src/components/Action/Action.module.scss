@@ -1,3 +1,9 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
 .login,
 .signup {
     color: #fff;
@@ -8,7 +14,7 @@
 
 .signup {
     display: inline-block;
-    margin-left: 1.3rem;
+    margin-left: -1.7rem;
     padding: 0.95rem 1.8rem 1.05rem 1.9rem;
     border-radius: 4rem;
     color: var(--primaryColor);

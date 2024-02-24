@@ -139,6 +139,7 @@ function DetailHero() {
     useEffect(() => {
         setInfoProduct(items.find((item) => item.id === id));
         setCount(1);
+        // eslint-disable-next-line
     }, [id]);
 
     const increase = () => {

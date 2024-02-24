@@ -1,0 +1,60 @@
+.cart {
+    background-color: var(--primaryColor);
+}
+
+.container {
+    width: 60rem;
+    margin: 0 auto;
+}
+
+.heading {
+    font-size: 4.3rem;
+    font-weight: 600;
+    line-height: normal;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-bottom: 5rem;
+}
+
+.provisional {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10rem;
+    padding: 0 3.5rem;
+    background-color: #fff;
+    border-radius: 1rem;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+}
+
+.title {
+    color: #000;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.price {
+    color: #f00;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.checkout {
+    flex: 0 1 15rem;
+}
