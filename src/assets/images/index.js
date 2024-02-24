@@ -18,6 +18,9 @@ const images = {
     user: require('~/assets/images/user.svg').default,
     buttonPlus: require('~/assets/images/buttonPlus.svg').default,
     buttonMinus: require('~/assets/images/buttonMinus.svg').default,
+    checkedCart: require('~/assets/images/checkedCart.svg').default,
+    unCheckedCart: require('~/assets/images/unCheckedCart.svg').default,
+    deleteItemInCart: require('~/assets/images/deleteItemInCart.svg').default,
 
     // Most Popular
     mostPopular_1: require('~/assets/images/most-popular-1.png'),

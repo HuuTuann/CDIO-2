@@ -114,12 +114,12 @@ function Pages() {
                 if (index === 0) {
                     return (
                         <>
-                            <Suggest items={items} />
+                            <Suggest key={index} items={items} />
                             <HeroPages />
                         </>
                     );
                 }
-                return <Suggest items={items} />;
+                return <Suggest key={index} items={items} />;
             })}
         </>
     );
