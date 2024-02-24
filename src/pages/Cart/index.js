@@ -228,27 +228,29 @@ function Cart() {
                             );
                         })}
                     </div>
-                    <div className={cx('provisional')}>
-                        <div className={cx('info')}>
-                            {orders.map((item, index) => (
-                                <div key={index} className={cx('item')}>
-                                    <h3 className={cx('name')}>{item.name}</h3>
-                                    <p className={cx('quantity')}>{`x ${item.quantity}`}</p>
-                                    <p className={cx('sub-total')}>{`${item.quantity * item.price}.00`}</p>
+                    {orders.length > 0 && (
+                        <div className={cx('provisional')}>
+                            <div className={cx('info')}>
+                                {orders.map((item, index) => (
+                                    <div key={index} className={cx('item')}>
+                                        <h3 className={cx('name')}>{item.name}</h3>
+                                        <p className={cx('quantity')}>{`x ${item.quantity}`}</p>
+                                        <p className={cx('sub-total')}>{`${item.quantity * item.price}.00`}</p>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className={cx('separate')} />
+                            <div className={cx('action')}>
+                                <div className={cx('col')}>
+                                    <div className={cx('title')}>Provisional</div>
+                                    <div className={cx('price')}>{`$ ${memorizedProvisional}.00`}</div>
                                 </div>
-                            ))}
-                        </div>
-                        <div className={cx('separate')} />
-                        <div className={cx('action')}>
-                            <div className={cx('col')}>
-                                <div className={cx('title')}>Provisional</div>
-                                <div className={cx('price')}>{`$ ${memorizedProvisional}.00`}</div>
-                            </div>
-                            <div className={cx('checkout')}>
-                                <Button type="rounded" value={'Order now'} />
+                                <div className={cx('checkout')}>
+                                    <Button type="rounded" value={'Order now'} />
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    )}
                 </div>
             </div>
         </section>

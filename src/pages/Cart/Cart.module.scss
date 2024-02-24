@@ -17,16 +17,20 @@
 
 .body {
     display: flex;
+    justify-content: center;
+}
+
+.body:has(.provisional) {
     align-items: flex-start;
     gap: 3rem;
 }
 
 .list {
+    gap: 3rem;
     width: 57rem;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    padding-bottom: 2.5rem;
+    padding-bottom: 5rem;
 }
 
 .provisional {

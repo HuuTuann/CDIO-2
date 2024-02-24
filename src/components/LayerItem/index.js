@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { notification } from 'antd';
 import classNames from 'classnames/bind';
 
 import styles from './LayerItem.module.scss';
@@ -12,6 +13,15 @@ function LayerItem({ id, image, price, height = 30 }) {
 
     const handleLoved = () => {
         setLoved(!loved);
+    };
+
+    const [api, contextHolder] = notification.useNotification();
+
+    const openNotification = (type) => {
+        api[type]({
+            message: 'Order Success',
+            description: 'Your item has been added to your cart. You can check it out now.',
+        });
     };
 
     const handleClick = () => {
@@ -27,6 +37,7 @@ function LayerItem({ id, image, price, height = 30 }) {
 
     return (
         <div className={cx('layer-item')}>
+            {contextHolder}
             <img className={cx('image')} src={image} alt="Image" style={{ height: `${height}rem` }} />
             <div className={cx('layer')} />
             <div className={cx('action')}>
@@ -34,7 +45,10 @@ function LayerItem({ id, image, price, height = 30 }) {
                     className={cx('shopping-cart')}
                     src={images.shoppingCart}
                     alt="Shopping cart"
-                    onClick={handleClick}
+                    onClick={() => {
+                        handleClick();
+                        openNotification('success');
+                    }}
                 />
                 <Link to={`/product-detail/${id}`}>
                     <img className={cx('information')} src={images.information} alt="Information" />
