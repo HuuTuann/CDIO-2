@@ -6,7 +6,7 @@ import images from '~/assets/images';
 
 const cx = classNames.bind(styles);
 
-function Suggest({ items }) {
+function Suggest({ items, type }) {
     const getItem = (item, index) => {
         return <Product index={index} infoProduct={item} />;
     };
@@ -14,9 +14,9 @@ function Suggest({ items }) {
     return (
         <div className={cx('suggest')}>
             <div className={cx('container')}>
-                <h2 className={cx('heading')}>{items.type}</h2>
+                <h2 className={cx('heading')}>{type}</h2>
                 <img className={cx('icon')} src={images.suggestIcon} alt="Icon" />
-                <div className={cx('list')}>{items.list.map((item, index) => getItem(item, index))}</div>
+                <div className={cx('list')}>{items.map((item, index) => getItem(item, index))}</div>
             </div>
         </div>
     );

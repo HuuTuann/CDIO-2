@@ -38,7 +38,7 @@ function LayerItem({ id, image, price, height = 30 }) {
     return (
         <div className={cx('layer-item')}>
             {contextHolder}
-            <img className={cx('image')} src={image} alt="Image" style={{ height: `${height}rem` }} />
+            <img className={cx('image')} src={image} alt="Food" style={{ height: `${height}rem` }} />
             <div className={cx('layer')} />
             <div className={cx('action')}>
                 <img

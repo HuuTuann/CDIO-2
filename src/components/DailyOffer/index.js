@@ -30,7 +30,7 @@ function DailyOffer() {
         return lists.map((item, index) => {
             return (
                 <div key={index} className={cx('item')}>
-                    <img className={cx('image')} src={item.image} alt="Image" />
+                    <img className={cx('image')} src={item.image} alt="Food" />
                     <div className={cx('content')}>
                         <h3 className={cx('sub-heading')}>{item.subHeading}</h3>
                         <p className={cx('desc')}>{item.desc}</p>
