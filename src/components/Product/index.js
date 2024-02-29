@@ -2,6 +2,7 @@ import classNames from 'classnames/bind';
 
 import { LayerItem } from '~/components';
 import styles from './Product.module.scss';
+import images from '~/assets/images';
 
 const cx = classNames.bind(styles);
 
