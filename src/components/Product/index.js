@@ -7,9 +7,11 @@ import images from '~/assets/images';
 const cx = classNames.bind(styles);
 
 function Product({ infoProduct, index }) {
+    const path = infoProduct.image;
+
     return (
         <div key={index} className={cx('product')}>
-            <LayerItem id={infoProduct.id} image={infoProduct.image} price={infoProduct.price} height={40} />
+            <LayerItem id={infoProduct.id} image={images[path]} price={infoProduct.price} height={40} />
             <div className={cx('content')}>
                 <h3 className={cx('name')}>{infoProduct.name}</h3>
                 <p className={cx('desc')}>{infoProduct.desc}</p>
