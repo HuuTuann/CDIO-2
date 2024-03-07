@@ -1,7 +1,9 @@
+import { OurBlog } from '~/components';
+
 function Blog() {
     return (
         <>
-            <h1>Blog</h1>
+            <OurBlog />
         </>
     );
 }

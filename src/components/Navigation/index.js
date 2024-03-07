@@ -17,14 +17,14 @@ function Navigation() {
                 </NavLink>
             </li>
             <li className={cx('item')}>
-                <Link className={cx('item__link')} to="">
+                <NavLink className={getClassName} to="/menu">
                     Menu
-                </Link>
+                </NavLink>
             </li>
             <li className={cx('item')}>
-                <Link className={cx('item__link')} to="">
+                <NavLink className={getClassName} to="/blog">
                     Blog
-                </Link>
+                </NavLink>
             </li>
             <li className={cx('item')}>
                 <NavLink className={getClassName} to="/pages">
