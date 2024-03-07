@@ -5,6 +5,7 @@ import classNames from 'classnames/bind';
 import styles from './Login.module.scss';
 import images from '~/assets/images';
 import { Input, Button } from '~/components';
+import { login } from '~/services/UserService';
 
 const cx = classNames.bind(styles);
 
@@ -20,6 +21,11 @@ function Login() {
         setPassword(e.target.value);
     };
 
+    const handleClick = async () => {
+        let res = await login(email, password);
+        console.log(res);
+    };
+
     return (
         <div className={cx('login')}>
             <div className={cx('container')}>
@@ -30,7 +36,13 @@ function Login() {
                 <form className={cx('form')}>
                     <Input label="Email" type="email" value={email} onChange={handleEmail} />
                     <Input label="Password" type="password" value={password} onChange={handlePassword} />
-                    <Button type="rounded" value="Login" />
+                    <Button
+                        type="rounded"
+                        value="Login"
+                        onClick={() => {
+                            handleClick();
+                        }}
+                    />
                 </form>
                 <div className={cx('separator')}>
                     <span className={cx('text')}>OR</span>

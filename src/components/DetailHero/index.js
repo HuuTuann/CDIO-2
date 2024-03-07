@@ -11,124 +11,112 @@ const cx = classNames.bind(styles);
 function DetailHero() {
     const items = [
         {
-            id: 'BF1',
+            id: '1',
             category: 'breakfast',
             name: 'Egg Frittata Muffins',
             desc: 'Fresh toasted sourdough bread with olive oil and pomegranate.',
             price: 24,
             rating: 5,
             countOfReviewer: 12,
-            image: images.suggestBreakfast_1,
+            image: 'suggestBreakfast_1',
+            createdAt: '2024-02-27T18:22:18.000Z',
+            updatedAt: '2024-02-27T18:22:18.000Z',
         },
         {
-            id: 'BF2',
+            id: '2',
             category: 'breakfast',
             name: 'Breakfast Bars',
             desc: 'Fresh toasted sourdough bread with olive oil and pomegranate.',
-            price: 29,
+            price: 24,
             rating: 5,
             countOfReviewer: 12,
-            image: images.suggestBreakfast_2,
+            image: 'suggestBreakfast_2',
+            createdAt: '2024-02-27T18:22:18.000Z',
+            updatedAt: '2024-02-27T18:22:18.000Z',
         },
         {
-            id: 'BF3',
+            id: '3',
             category: 'breakfast',
             name: 'Breakfast Sandwiches',
             desc: 'Fresh toasted sourdough bread with olive oil and pomegranate.',
             price: 19,
             rating: 5,
             countOfReviewer: 12,
-            image: images.suggestBreakfast_3,
+            image: 'suggestBreakfast_3',
+            createdAt: '2024-02-29T03:30:31.000Z',
+            updatedAt: '2024-02-29T03:30:31.000Z',
         },
         {
-            id: 'L1',
+            id: '4',
             category: 'lunch',
             name: 'Crispy chicken breasts',
-            desc: 'Fresh toasted sourdough bread with olive oil and pomegranate.',
-            price: 54,
-            rating: 5,
-            countOfReviewer: 12,
-            image: images.suggestLunch_1,
-        },
-        {
-            id: 'L2',
-            category: 'lunch',
-            name: 'Schezwan Noodles',
-            desc: 'Fresh toasted sourdough bread with olive oil and pomegranate.',
-            price: 49,
-            rating: 5,
-            countOfReviewer: 12,
-            image: images.suggestLunch_2,
-        },
-        {
-            id: 'L3',
-            category: 'lunch',
-            name: 'New Lubina Marinada',
             desc: 'Fresh toasted sourdough bread with olive oil and pomegranate.',
             price: 59,
             rating: 5,
             countOfReviewer: 12,
-            image: images.suggestLunch_3,
+            image: 'suggestLunch_1',
+            createdAt: '2024-02-29T03:30:31.000Z',
+            updatedAt: '2024-02-29T03:30:31.000Z',
         },
         {
-            id: 'D1',
-            category: 'dinner',
-            name: 'Crispy chicken breasts',
-            desc: 'Fresh toasted sourdough bread with oDive oil and pomegranate.',
-            price: 54,
+            id: '5',
+            category: 'lunch',
+            name: 'New Lubina Marinada',
+            desc: 'Fresh toasted sourdough bread with olive oil and pomegranate.',
+            price: 29,
             rating: 5,
-            countOfReviewer: 12,
-            image: images.suggestDinner_1,
+            countOfReviewer: 17,
+            image: 'suggestLunch_2',
+            createdAt: '2024-02-29T03:30:31.000Z',
+            updatedAt: '2024-02-29T03:30:31.000Z',
         },
         {
-            id: 'D2',
-            category: 'dinner',
+            id: '6',
+            category: 'lunch',
             name: 'Schezwan Noodles',
             desc: 'Fresh toasted sourdough bread with olive oil and pomegranate.',
-            price: 49,
+            price: 29,
             rating: 5,
-            countOfReviewer: 12,
-            image: images.suggestDinner_2,
+            countOfReviewer: 17,
+            image: 'suggestLunch_3',
+            createdAt: '2024-02-29T03:30:31.000Z',
+            updatedAt: '2024-02-29T03:30:31.000Z',
         },
         {
-            id: 'D3',
+            id: '7',
             category: 'dinner',
-            name: 'New Lubina Marinada',
+            name: 'Crispy chicken breasts',
             desc: 'Fresh toasted sourdough bread with olive oil and pomegranate.',
             price: 59,
             rating: 5,
             countOfReviewer: 12,
-            image: images.suggestDinner_3,
+            image: 'suggestDinner_1',
+            createdAt: '2024-02-29T03:30:31.000Z',
+            updatedAt: '2024-02-29T03:30:31.000Z',
         },
         {
-            id: 'S1',
-            category: 'starters',
-            name: 'Crispy chicken breasts',
-            desc: 'Fresh toasted sourdough bread with olive oil and pomegranate.',
-            price: 54,
-            rating: 5,
-            countOfReviewer: 12,
-            image: images.suggestStarters_1,
-        },
-        {
-            id: 'S2',
-            category: 'starters',
-            name: 'Schezwan Noodles',
-            desc: 'Fresh toasted sourdough bread with olive oil and pomegranate.',
-            price: 49,
-            rating: 5,
-            countOfReviewer: 12,
-            image: images.suggestStarters_2,
-        },
-        {
-            id: 'S3',
-            category: 'starters',
+            id: '8',
+            category: 'dinner',
             name: 'New Lubina Marinada',
             desc: 'Fresh toasted sourdough bread with olive oil and pomegranate.',
-            price: 59,
+            price: 29,
             rating: 5,
-            countOfReviewer: 12,
-            image: images.suggestStarters_3,
+            countOfReviewer: 17,
+            image: 'suggestDinner_2',
+            createdAt: '2024-02-29T03:30:31.000Z',
+            updatedAt: '2024-02-29T03:30:31.000Z',
+        },
+        {
+            id: '9',
+            category: 'dinner',
+            name: 'Schezwan Noodles',
+            desc: 'Fresh toasted sourdough bread with olive oil and pomegranate.',
+            price: 29,
+            rating: 5,
+            countOfReviewer: 17,
+            image: 'suggestDinner_3',
+            createdAt: '2024-02-29T03:30:31.000Z',
+            updatedAt: '2024-02-29T03:30:31.000Z',
         },
     ];
 
@@ -150,23 +138,23 @@ function DetailHero() {
         setCount(count - 1);
     };
 
-    const relatedItems = items.filter((item) => item.category === infoProduct.category);
+    const relatedItems = items.filter((item) => item.category === infoProduct?.category);
 
     return (
         <div className={cx('detail')}>
             <div className={cx('detail-hero')}>
                 <div className={cx('container')}>
                     <figure className={cx('banner')}>
-                        <img className={cx('picture')} src={infoProduct.image} alt="Food" />
+                        <img className={cx('picture')} src={images[infoProduct.image]} alt="Food" />
                     </figure>
                     <div className={cx('content')}>
-                        <h1 className={cx('heading')}>{infoProduct.name}</h1>
+                        <h1 className={cx('heading')}>{infoProduct?.name}</h1>
                         <div className={cx('rating')}>
-                            <Rating rating={infoProduct.rating} />
-                            <p className={cx('countOfReviewer')}>( {infoProduct.countOfReviewer} customer review )</p>
+                            <Rating rating={infoProduct?.rating} />
+                            <p className={cx('countOfReviewer')}>( {infoProduct?.countOfReviewer} customer review )</p>
                         </div>
-                        <p className={cx('price')}>$ {infoProduct.price}.00</p>
-                        <p className={cx('desc')}>{infoProduct.desc}</p>
+                        <p className={cx('price')}>$ {infoProduct?.price}.00</p>
+                        <p className={cx('desc')}>{infoProduct?.desc}</p>
                         <div className={cx('row')}>
                             <div className={cx('actions')}>
                                 <button className={cx('button')} onClick={decrease}>
