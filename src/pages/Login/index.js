@@ -23,7 +23,10 @@ function Login() {
 
     const handleClick = async () => {
         let res = await login(email, password);
-        console.log(res);
+        if (res.data.errCode === 0) {
+            window.localStorage.setItem('isLogged', true);
+            window.location.href = '/';
+        }
     };
 
     return (

@@ -1,8 +1,15 @@
+import { PreviewMenu, OurChef } from '~/components';
+import classNames from 'classnames/bind';
+import styles from './Menu.module.scss';
+
+const cx = classNames.bind(styles);
+
 function Menu() {
     return (
-        <>
-            <h1>Menu</h1>
-        </>
+        <div className={cx('container')}>
+            <PreviewMenu />
+            <OurChef />
+        </div>
     );
 }
 

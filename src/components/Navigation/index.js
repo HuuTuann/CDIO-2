@@ -1,4 +1,4 @@
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import styles from './Navigation.module.scss';
 
@@ -17,14 +17,14 @@ function Navigation() {
                 </NavLink>
             </li>
             <li className={cx('item')}>
-                <Link className={cx('item__link')} to="">
+                <NavLink className={getClassName} to="/menu">
                     Menu
-                </Link>
+                </NavLink>
             </li>
             <li className={cx('item')}>
-                <Link className={cx('item__link')} to="">
+                <NavLink className={getClassName} to="/blog">
                     Blog
-                </Link>
+                </NavLink>
             </li>
             <li className={cx('item')}>
                 <NavLink className={getClassName} to="/pages">
