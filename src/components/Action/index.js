@@ -6,7 +6,7 @@ import images from '~/assets/images';
 const cx = classNames.bind(styles);
 
 function Action() {
-    const isLogged = localStorage.getItem('isLogged') || false;
+    const isLogged = localStorage.getItem('isLogged') || true;
 
     return (
         <div className={cx('wrapper')}>
