@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { notification } from 'antd';
 import classNames from 'classnames/bind';
@@ -8,8 +8,19 @@ import images from '~/assets/images';
 
 const cx = classNames.bind(styles);
 
-function LayerItem({ id, image, price, height = 30 }) {
+function LayerItem({ id, image, height = 30 }) {
+    const [carts, setCarts] = useState([]);
     const [loved, setLoved] = useState(false);
+
+    useEffect(() => {
+        getCart(1);
+    }, []);
+
+    const getCart = async (customerID) => {
+        const res = await fetch(`http://localhost:8080/customerID=${customerID}`);
+        const data = await res.json();
+        setCarts(data);
+    };
 
     const handleLoved = () => {
         setLoved(!loved);
@@ -24,15 +35,14 @@ function LayerItem({ id, image, price, height = 30 }) {
         });
     };
 
-    const handleClick = () => {
-        const cart = JSON.parse(localStorage.getItem('carts')) || [];
-        const findIndex = cart.findIndex((item) => item.id === id);
-        if (findIndex !== -1) {
-            cart[findIndex].quantity += 1;
-        } else {
-            cart.push({ id, quantity: 1, price });
-        }
-        localStorage.setItem('carts', JSON.stringify(cart));
+    const handleClick = (id) => {
+        const newCarts = carts.map((item) => {
+            if (item.id === id) {
+                item.quantity += 1;
+            }
+            return item;
+        });
+        setCarts(newCarts);
     };
 
     return (
@@ -46,7 +56,7 @@ function LayerItem({ id, image, price, height = 30 }) {
                     src={images.shoppingCart}
                     alt="Shopping cart"
                     onClick={() => {
-                        handleClick();
+                        handleClick(id);
                         openNotification('success');
                     }}
                 />

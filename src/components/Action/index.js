@@ -6,7 +6,7 @@ import images from '~/assets/images';
 const cx = classNames.bind(styles);
 
 function Action() {
-    const isLogged = localStorage.getItem('isLogged') || true;
+    const isLogged = localStorage.getItem('isLogged') || false;
 
     return (
         <div className={cx('wrapper')}>
@@ -15,7 +15,15 @@ function Action() {
                     <Link to="/cart">
                         <img className={cx('icon')} src={images.shoppingCart} alt="Shopping cart" />
                     </Link>
-                    <img className={cx('icon')} src={images.user} alt="Shopping cart" />
+                    <img
+                        className={cx('icon')}
+                        src={images.logOut}
+                        alt="User"
+                        onClick={() => {
+                            localStorage.removeItem('isLogged');
+                            window.location.href = '/';
+                        }}
+                    />
                 </>
             ) : (
                 <>

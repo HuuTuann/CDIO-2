@@ -83,22 +83,70 @@ function Cart() {
     //     localStorage.setItem('orders', JSON.stringify(newOrders));
     // };
 
-    // // Handle Provisional
-    // const memorizedProvisional = useMemo(
-    //     () => orders.reduce((acc, item) => acc + item.quantity * item.price, 0),
-    //     [orders],
-    // );
-
     const [carts, setCarts] = useState([]);
+    const [orders, setOrders] = useState([]);
 
     useEffect(() => {
         getCart(1);
     }, []);
 
+    useEffect(() => {
+        const newOrders = carts.filter((item) => item.checked);
+        setOrders(newOrders);
+    }, [carts]);
+
+    // Handle Provisional
+    const memorizedProvisional = useMemo(
+        () => orders.reduce((acc, item) => acc + item.quantity * item.price, 0),
+        [orders],
+    );
+
     const getCart = async (customerID) => {
         const res = await fetch(`http://localhost:8080/customerID=${customerID}`);
         const data = await res.json();
         setCarts(data);
+    };
+
+    const handleClick = (id, type) => {
+        const newCarts = carts.map((item) => {
+            if (item.id === id) {
+                if (type === 'increase') {
+                    return { ...item, quantity: item.quantity + 1 };
+                }
+                if (type === 'decrease' && item.quantity > 1) {
+                    return { ...item, quantity: item.quantity - 1 };
+                }
+            }
+            return item;
+        });
+        setCarts(newCarts);
+    };
+
+    const handleChange = (id, quantity) => {
+        if (/^[1-9]\d*$/.test(quantity)) {
+            const newCarts = carts.map((item) => {
+                if (item.id === id) {
+                    return { ...item, quantity: parseInt(quantity) };
+                }
+                return item;
+            });
+            setCarts(newCarts);
+        }
+    };
+
+    const handleChecked = (id) => {
+        const newCarts = carts.map((item) => {
+            if (item.id === id) {
+                return { ...item, checked: !item.checked };
+            }
+            return item;
+        });
+        setCarts(newCarts);
+    };
+
+    const handleDelete = (id) => {
+        const newCarts = carts.filter((item) => item.id !== id);
+        setCarts(newCarts);
     };
 
     return (
@@ -108,41 +156,27 @@ function Cart() {
                 <div className={cx('body')}>
                     <div className={cx('list')}>
                         {carts.map((item, index) => {
+                            const info = {
+                                id: item.id,
+                                image: images[item.image],
+                                name: item.name,
+                                price: item.price,
+                                quantity: item.quantity,
+                                checked: item.checked,
+                            };
                             return (
                                 <CartItem
                                     key={`cart-item-${index}`}
-                                    id={item.id}
-                                    image={images[item.image]}
-                                    name={item.name}
-                                    price={item.price}
-                                    quantity={item.quantity}
-                                    // handleClick={handleClick}
-                                    // handleChange={handleChange}
-                                    // handleChecked={handleChecked}
-                                    // handleDelete={handleDelete}
-                                />
-                            );
-                        })}
-                        {/* {carts.map((item, index) => {
-                            const product = items.find((product) => product.id === item.id);
-                            const path = product?.image;
-                            return (
-                                <CartItem
-                                    key={index}
-                                    id={product?.id}
-                                    image={images[path]}
-                                    name={product?.name}
-                                    price={product?.price}
-                                    quantity={item.quantity}
+                                    info={info}
                                     handleClick={handleClick}
                                     handleChange={handleChange}
                                     handleChecked={handleChecked}
                                     handleDelete={handleDelete}
                                 />
                             );
-                        })} */}
+                        })}
                     </div>
-                    {/* {orders.length > 0 && (
+                    {orders.length > 0 && (
                         <div className={cx('provisional')}>
                             <div className={cx('info')}>
                                 {orders.map((item, index) => (
@@ -164,7 +198,7 @@ function Cart() {
                                 </div>
                             </div>
                         </div>
-                    )} */}
+                    )}
                 </div>
             </div>
         </section>

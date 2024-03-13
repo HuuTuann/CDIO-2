@@ -5,18 +5,17 @@ import images from '~/assets/images';
 
 const cx = classNames.bind(styles);
 
-function CartItem({ id, image, name, price, quantity, handleClick, handleChange, handleChecked, handleDelete }) {
-    const orders = JSON.parse(localStorage.getItem('orders')) || [];
-    const findIndex = orders.findIndex((item) => item.id === id);
+function CartItem({ info, handleClick, handleChange, handleChecked, handleDelete }) {
+    const { id, name, price, image, quantity, checked } = info;
 
     return (
         <div className={cx('item')} key={id}>
             <img
                 className={cx('icon-check')}
-                src={findIndex !== -1 ? images.checkedCart : images.unCheckedCart}
+                src={checked ? images.checkedCart : images.unCheckedCart}
                 alt="Handle Check Cart"
                 onClick={() => {
-                    handleChecked(id, name, quantity, price);
+                    handleChecked(id);
                 }}
             />
             <img className={cx('image')} src={image} alt="Product" />
