@@ -6,6 +6,8 @@ import styles from './SignUp.module.scss';
 import images from '~/assets/images';
 import { Input, Button } from '~/components';
 
+import { signup } from '~/services/UserService';
+
 const cx = classNames.bind(styles);
 
 function SignUp() {
@@ -47,6 +49,11 @@ function SignUp() {
         setValidation(validationNew);
     }, [password]);
 
+    const handleSignUp = async () => {
+        let res = await signup(name, email, password);
+        console.log(res);
+    };
+
     return (
         <div className={cx('signup')}>
             <div className={cx('container')}>
@@ -84,7 +91,7 @@ function SignUp() {
                             </div>
                         )}
                     </div>
-                    <Button type="rounded" value="Sign Up" />
+                    <Button type="rounded" value="Sign Up" onClick={handleSignUp} />
                 </form>
                 <div className={cx('separator')}>
                     <span className={cx('text')}>OR</span>

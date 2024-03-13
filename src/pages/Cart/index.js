@@ -4,6 +4,7 @@ import classNames from 'classnames/bind';
 import styles from './Cart.module.scss';
 import images from '~/assets/images';
 import { CartItem, Button } from '~/components';
+import { getCart } from '~/services/UserService';
 
 const cx = classNames.bind(styles);
 
@@ -83,11 +84,12 @@ function Cart() {
     //     localStorage.setItem('orders', JSON.stringify(newOrders));
     // };
 
+    const customerID = localStorage.getItem('customerID');
     const [carts, setCarts] = useState([]);
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        getCart(1);
+        getCartAPI(customerID);
     }, []);
 
     useEffect(() => {
@@ -101,10 +103,9 @@ function Cart() {
         [orders],
     );
 
-    const getCart = async (customerID) => {
-        const res = await fetch(`http://localhost:8080/customerID=${customerID}`);
-        const data = await res.json();
-        setCarts(data);
+    const getCartAPI = async (customerID) => {
+        const res = await getCart(customerID);
+        setCarts(res.data.cart.customer);
     };
 
     const handleClick = (id, type) => {
@@ -120,6 +121,7 @@ function Cart() {
             return item;
         });
         setCarts(newCarts);
+        console.log(carts);
     };
 
     const handleChange = (id, quantity) => {

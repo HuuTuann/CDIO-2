@@ -10,8 +10,8 @@ import { login } from '~/services/UserService';
 const cx = classNames.bind(styles);
 
 function Login() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState('nguyenvanbao@gmail.com');
+    const [password, setPassword] = useState('1');
 
     const handleEmail = (e) => {
         setEmail(e.target.value);
@@ -25,6 +25,7 @@ function Login() {
         let res = await login(email, password);
         if (res.data.errCode === 0) {
             window.localStorage.setItem('isLogged', true);
+            window.localStorage.setItem('customerID', res.data.user.id);
             window.location.href = '/';
         }
     };

@@ -1,20 +1,21 @@
 import { useState, useEffect } from 'react';
 import { Suggest, HeroPages } from '~/components';
 
+import { getItems } from '~/services/UserService';
+
 function Pages() {
     const [typeData, setTypeData] = useState([]);
     const [data, setData] = useState([]);
 
     const filterData = (type) => data.filter((item) => item.category === type);
 
-    async function fetchData() {
-        const response = await fetch('http://localhost:8080/items');
-        const jsonData = await response.json();
-        setData(jsonData);
-    }
+    const getItem = async () => {
+        let res = await getItems();
+        setData(res.data.items);
+    };
 
     useEffect(() => {
-        fetchData();
+        getItem();
     }, []);
 
     useEffect(() => {
