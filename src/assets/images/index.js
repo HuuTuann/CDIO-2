@@ -21,6 +21,7 @@ const images = {
     checkedCart: require('~/assets/images/checkedCart.svg').default,
     unCheckedCart: require('~/assets/images/unCheckedCart.svg').default,
     deleteItemInCart: require('~/assets/images/deleteItemInCart.svg').default,
+    logOut: require('~/assets/images/logOut.svg').default,
 
     // Most Popular
     mostPopular_1: require('~/assets/images/most-popular-1.png'),
